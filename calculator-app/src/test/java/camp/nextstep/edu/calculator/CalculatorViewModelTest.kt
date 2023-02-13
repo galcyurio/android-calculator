@@ -2,6 +2,7 @@ package camp.nextstep.edu.calculator
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import camp.nextstep.edu.calculator.domain.Operator
+import camp.nextstep.edu.calculator.util.FakeCalculatorRepository
 import camp.nextstep.edu.calculator.util.getOrAwaitValue
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
@@ -16,7 +17,7 @@ class CalculatorViewModelTest {
 
     @Before
     fun setUp() {
-        viewModel = CalculatorViewModel()
+        viewModel = CalculatorViewModel(FakeCalculatorRepository)
     }
 
     @Test
